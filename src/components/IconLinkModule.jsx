@@ -1,48 +1,45 @@
 import React, { useEffect, useState } from 'react'
 
-function IconLinkModule(iconThemeLight) {   
-    const [ iconTheme , setIconTheme ] = useState('')
-  
+function IconLinkModule(prop) {   
+    const [ iconThemeColor , setIconThemeColor ] = useState('')
+
+    let theme = (prop.iconTheme) ? 'white' : 'black'
+
     const themeChecker = () => {
-        // update iconTheme based on iconThemeLight
-        setIconTheme(prev => prev = (iconThemeLight) ? 'white' : 'black')
-        console.log(iconThemeLight);
+      setIconThemeColor(prev => prev = theme)
     }
 
     useEffect(() => {
-        themeChecker()
-    }, [iconThemeLight])
-
-    useEffect(() => {
-    }, [iconTheme])
+      themeChecker()
+    }, [prop])
 
   return (
-    <div>
+    <div className='flex flex-col justify-center w-72'>
         {/* top row */}
-        <div className="top flex justify-evenly">
+        <div className="top flex justify-evenly w-72 py-4">
             <a href="#">
-              <img className="h-10 md:h-12" 
-              src={require('../imgs/portfolio-black.png')} alt="Portfolio Link" />
+              <img className="h-10 w-10 md:h-12 md:w-12" 
+              src={require(`../imgs/portfolio-${theme}.png`)} alt="Portfolio Link" />
             </a>
             <a href="#">
-              <img className="h-10 md:h-12" 
-              src={require('../imgs/github-black.png')} alt="Github Link" />
+              <img className="h-10 w-10 md:h-12 md:w-12" 
+              src={require(`../imgs/github-${theme}.png`)} alt="Github Link" />
             </a>
             <a href="#">
-              <img className="h-10 md:h-12" 
-              src={require('../imgs/resume-black.png')} alt="Resume Link" />
+              <img className="h-10 w-10 md:h-12 md:w-12" 
+              src={require(`../imgs/resume-${theme}.png`)} alt="Resume Link" />
             </a>
           </div>
 
         {/* bottom row */}
-          <div className="bottom flex justify-evenly">
-          <a href="#">
-              <img className="h-10 md:h-12" 
-              src={require('../imgs/linkedin-black.png')} alt="LinkedIn Link" />
+          <div className="bottom flex justify-evenly w-72 py-4">
+          <a href="#"> 
+              <img className="h-10 w-10 md:h-12 md:w-12" 
+              src={require(`../imgs/linkedin-${theme}.png`)} alt="LinkedIn Link" />
             </a>
             <a href="#">
-              <img className="h-10 md:h-12" 
-              src={require('../imgs/contact-black.png')} alt="Contact Link" />
+              <img className="h-10 w-10 md:h-12 md:w-12" 
+              src={require(`../imgs/contact-${theme}.png`)} alt="Contact Link" />
             </a>
           </div>
     </div>

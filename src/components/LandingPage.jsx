@@ -28,14 +28,14 @@ function LandingPage() {
   // console.log(mobile, iconThemeLight)
   return (
     <div
-      className="landing-page-wrapper md:bg-white md:h-screen w-screen relative md:flex grid-cols-2"
+      className="landing-page-wrapper md:bg-white h-screen w-screen relative md:flex grid-cols-2"
       id="landing-page"
     >
       {/* landing- main intro */}
-      <div className="left w-full md:w-1/2 bg-black h-screen flex justify-center ">
-        <div className="text-white  w-2/3 md:w-1/2 content-center flex flex-col justify-center h-2/3 md:h-full">
+      <div className="left w-full md:w-2/3 bg-black h-2/3 md:h-screen flex justify-center ">
+        <div className="text-white  md:w-1/2 content-center flex flex-col justify-center h-2/3 ">
           <h3 className="text-2xl md:text-3xl font-zen">hi, i am</h3>
-          <h1 className="text-6xl w-300 font-maven font-medium">
+          <h1 className="text-5xl md:text-6xl w-300 font-maven font-medium">
             TENZIN
             <br />
             KALDEN
@@ -45,7 +45,9 @@ function LandingPage() {
             <span style={{ whiteSpace: "nowrap" }}>Front End Developer</span>
           </h3>
         </div>
+        
       </div>
+      
 
       {/* About me section */}
       <div className="right right-0 w-full h-full md:w-1/2 bg-black md:bg-white md:h-screen flex flex-col items-center justify-center">
@@ -67,9 +69,14 @@ function LandingPage() {
           </p>
         </div>
 
-        <div className="icon-link-module flex flex-col w-3/5 lg:w-2/5 max-w-md content-center py-12">
-          <IconLinkModule iconTheme={iconThemeLight} />
-        </div>
+        {
+          (!mobile) &&
+          <div className="icon-link-module flex flex-col w-autocontent-center py-12">
+            <IconLinkModule iconTheme={iconThemeLight} />
+          </div>
+        }
+        
+        
 
       </div>
     </div>
