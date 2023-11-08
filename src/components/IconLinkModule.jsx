@@ -14,31 +14,31 @@ function IconLinkModule(prop) {
     }, [prop])
 
   return (
-    <div className='flex flex-col justify-center w-72'>
+    <div className='flex flex-col justify-center w-72 py-2 md:py-8'>
         {/* top row */}
-        <div className="top flex justify-evenly w-72 py-4">
+        <div className="top flex justify-evenly w-72 py-2 ">
             <a href="#">
-              <img className="h-10 w-10 md:h-12 md:w-12" 
+              <img className="h-14 w-14 md:h-16 md:w-16" 
               src={require(`../imgs/portfolio-${theme}.png`)} alt="Portfolio Link" />
             </a>
             <a href="#">
-              <img className="h-10 w-10 md:h-12 md:w-12" 
+              <img className="h-14 w-14 md:h-16 md:w-16" 
               src={require(`../imgs/github-${theme}.png`)} alt="Github Link" />
             </a>
             <a href="#">
-              <img className="h-10 w-10 md:h-12 md:w-12" 
+              <img className="h-14 w-14 md:h-16 md:w-16" 
               src={require(`../imgs/resume-${theme}.png`)} alt="Resume Link" />
             </a>
           </div>
 
         {/* bottom row */}
-          <div className="bottom flex justify-evenly w-72 py-4">
+          <div className="bottom flex justify-evenly w-72 py-2">
           <a href="#"> 
-              <img className="h-10 w-10 md:h-12 md:w-12" 
+              <img className="h-14 w-14 md:h-16 md:w-16" 
               src={require(`../imgs/linkedin-${theme}.png`)} alt="LinkedIn Link" />
             </a>
             <a href="#">
-              <img className="h-10 w-10 md:h-12 md:w-12" 
+              <img className="h-14 w-14 md:h-16 md:w-16" 
               src={require(`../imgs/contact-${theme}.png`)} alt="Contact Link" />
             </a>
           </div>

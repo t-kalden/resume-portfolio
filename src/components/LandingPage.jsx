@@ -32,8 +32,8 @@ function LandingPage() {
       id="landing-page"
     >
       {/* landing- main intro */}
-      <div className="left w-full md:w-2/3 bg-black h-2/3 md:h-screen flex justify-center ">
-        <div className="text-white  md:w-1/2 content-center flex flex-col justify-center h-2/3 ">
+      <div className="left w-full md:w-1/2 bg-black h-2/3 md:h-screen flex justify-center ">
+        <div className="text-white  md:w-1/2 content-center flex flex-col justify-center ">
           <h3 className="text-2xl md:text-3xl font-zen">hi, i am</h3>
           <h1 className="text-5xl md:text-6xl w-300 font-maven font-medium">
             TENZIN
@@ -47,13 +47,18 @@ function LandingPage() {
         </div>
         
       </div>
+      {
+        (mobile) && 
+          <div className="bg-black icon-link-module flex flex-col grid w-auto content-center py-12 justify-center ">
+            <IconLinkModule iconTheme={iconThemeLight} />
+          </div>
+        }
       
-
       {/* About me section */}
-      <div className="right right-0 w-full h-full md:w-1/2 bg-black md:bg-white md:h-screen flex flex-col items-center justify-center">
-        <div className="about-container w-4/5 ">
+      <div className="right right-0 w-full md:h-full md:w-1/2 bg-black md:bg-white md:h-screen flex flex-col items-center justify-center">
+        <div className="about-container w-4/5 xl:w-3/5">
           <h3 className="text-2xl md:text-3xl text-white md:text-black font-zen">
-            who am i...
+            who i am...
           </h3>
           <p className="about-text font-inter text-white md:text-black text-lg py-2 pt-4 font-light">
             My foray into the world of Web Development was purely coincidental.
@@ -71,7 +76,7 @@ function LandingPage() {
 
         {
           (!mobile) &&
-          <div className="icon-link-module flex flex-col w-autocontent-center py-12">
+          <div className="icon-link-module flex flex-col w-autocontent-center py-10 lg:py-12">
             <IconLinkModule iconTheme={iconThemeLight} />
           </div>
         }
