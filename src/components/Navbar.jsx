@@ -36,7 +36,10 @@ function Navbar() {
 
   return (
    <>
-    <FaBars color={iconColor} size={32} className="absolute right-8 top-6 z-10"/>
+    <button size={32} className="absolute text-black-grey right-12 top-8 z-10 border-2 
+    border-zinc-900 px-5 py-1 rounded-full font-maven hover:bg-black-grey hover:text-dark-white"> 
+      MENU
+    </button>
    </>
   );
 }
